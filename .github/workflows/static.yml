@@ -28,6 +28,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
+      - name: install dependency
+        run: yarn install
+      - name: build
+        run: yarn build
+          
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -43,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
+          path: '/docs/.vuepress/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
