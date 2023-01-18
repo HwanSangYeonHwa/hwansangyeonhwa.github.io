@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /original_logo.png
 tagline: HwanSangYeonHwa web
 actionText: Quick Start →
 actionLink: /guide/
