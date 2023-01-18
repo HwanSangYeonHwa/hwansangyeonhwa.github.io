@@ -1,6 +1,13 @@
 const { description } = require('../../package')
 
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@img': 'img'
+      }
+    }
+  },
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -16,7 +23,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#D1B2FF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
