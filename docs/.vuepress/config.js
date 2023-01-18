@@ -4,7 +4,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@img': 'img'
+        '@img': 'docs/img'
       }
     }
   },
