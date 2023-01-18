@@ -1,6 +1,9 @@
 const { description } = require('../../package')
 
 module.exports = {
+  markdown: {
+    lineNumbers: true
+  },
   configureWebpack: {
     resolve: {
       alias: {
@@ -23,6 +26,9 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png"}],
     ['meta', { name: 'theme-color', content: '#D1B2FF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
@@ -34,12 +40,18 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    logo: '/original_logo.png',
+    smoothScroll: true,
     repo: '',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
+      {
+        text: 'Intro',
+        link: '/intro/',
+      },
       {
         text: 'Guide',
         link: '/guide/',
@@ -49,11 +61,21 @@ module.exports = {
         link: '/config/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Karanda',
+        link: 'https://hwansangyeonhwa.github.io/Karanda'
       }
     ],
     sidebar: {
+      '/intro/': [
+        {
+          title: 'Introduction',
+          collapsable: false,
+          children: [
+            '',
+            'contact-us',
+          ]
+        }
+      ],
       '/guide/': [
         {
           title: 'Guide',
@@ -73,5 +95,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    '@vuepress/nprogress',
   ]
 }
