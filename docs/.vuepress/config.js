@@ -37,7 +37,6 @@ export default defineUserConfig({
         link: '/intro/'
         //children: ['/intro/README.md', '/intro/contact-us.md']
       },
-
       {
         text: 'Discord',
         link: 'https://discord.gg/uZ6VsfKqxG'
@@ -66,16 +65,6 @@ export default defineUserConfig({
           children: [
             '',
             'using-vue',
-          ]
-        }
-      ],
-      '/manual/': [
-        {
-          text: 'Guild system manual',
-          collapsable: false,
-          children: [
-            '/manual/README.md',
-            '/manual/guild-window.md',
           ]
         }
       ],
