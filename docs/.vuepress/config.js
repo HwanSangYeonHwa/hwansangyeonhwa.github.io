@@ -1,30 +1,14 @@
 const { description } = require('../../package')
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
 
-module.exports = {
+export default defineUserConfig({
   markdown: {
-    lineNumbers: true
+    lineNumbers: false
   },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@img': '../img'
-      }
-    }
-  },
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
+  lang: 'ko-KR',
   title: '환상연화',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
   description: description,
-
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}],
@@ -33,24 +17,14 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
-  themeConfig: {
+  theme: defaultTheme({
+    // set config here
     logo: '/original_logo.png',
-    smoothScroll: true,
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: true,
-    nav: [
+    navbar: [
       {
         text: 'Intro',
-        link: '/intro/',
+        link: '/intro/'
+        //children: ['/intro/README.md', '/intro/contact-us.md']
       },
       {
         text: 'Guide',
@@ -72,17 +46,17 @@ module.exports = {
     sidebar: {
       '/intro/': [
         {
-          title: 'Introduction',
+          text: 'Introduction',
           collapsable: false,
           children: [
-            '',
-            'contact-us',
+            '/intro/README.md',
+            '/intro/contact-us.md',
           ]
         }
       ],
       '/guide/': [
         {
-          title: 'Guide',
+          text: 'Guide',
           collapsable: false,
           children: [
             '',
@@ -90,16 +64,7 @@ module.exports = {
           ]
         }
       ],
-    }
-  },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-    '@vuepress/nprogress',
-    ['@vuepress/google-analytics',{'ga': 'G-SG25RN9QVP'}]
-  ]
-}
+    },
+    lastUpdated: true
+  }),
+})
