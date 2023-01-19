@@ -61,6 +61,10 @@ module.exports = {
         link: '/config/'
       },
       {
+        text: 'Discord',
+        link: 'https://discord.gg/uZ6VsfKqxG'
+      },
+      {
         text: 'Karanda',
         link: 'https://hwansangyeonhwa.github.io/Karanda'
       }
