@@ -18,6 +18,7 @@ export default defineUserConfig({
     ['meta', { name: 'theme-color', content: '#D1B2FF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'google-site-verification', content: 'fahdkc5Z4GY4O_xXkE3seM1IF7d6IXxQn7SMK_CYmRg"' }]
   ],
   plugins:[
     googleAnalyticsPlugin({
