@@ -1,4 +1,5 @@
 const { description } = require('../../package')
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 
@@ -16,6 +17,11 @@ export default defineUserConfig({
     ['meta', { name: 'theme-color', content: '#D1B2FF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+  ],
+  plugins:[
+    googleAnalyticsPlugin({
+      id: 'G-SG25RN9QVP',
+    }),
   ],
   theme: defaultTheme({
     // set config here
