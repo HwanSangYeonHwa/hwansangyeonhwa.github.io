@@ -1,9 +1,9 @@
 ---
 home: true
 heroImage: /original_logo.png
-tagline: '#dksk #sdd #ddd'
+tagline: '#초식 #매너 #거점X'
 actionText: Contact Us →
-actionLink: /guide/
+actionLink: /intro/contact-us
 features:
 - title: Feature 1 Title
   details: Feature 1 Description

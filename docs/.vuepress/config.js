@@ -100,5 +100,6 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     '@vuepress/nprogress',
+    '@vuepress/google-analytics',{'ga': 'G-SG25RN9QVP'}
   ]
 }
