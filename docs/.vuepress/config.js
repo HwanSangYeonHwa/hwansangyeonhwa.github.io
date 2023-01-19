@@ -1,5 +1,6 @@
 const { description } = require('../../package')
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { searchPlugin } from '@vuepress/plugin-search'
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 
@@ -22,6 +23,10 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-SG25RN9QVP',
     }),
+    searchPlugin({
+      // allow searching the `tags` frontmatter
+      getExtraFields: (page) => page.frontmatter.tags ?? [],
+    }),
   ],
   theme: defaultTheme({
     // set config here
@@ -32,14 +37,7 @@ export default defineUserConfig({
         link: '/intro/'
         //children: ['/intro/README.md', '/intro/contact-us.md']
       },
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
+
       {
         text: 'Discord',
         link: 'https://discord.gg/uZ6VsfKqxG'
@@ -53,9 +51,10 @@ export default defineUserConfig({
       '/intro/': [
         {
           text: 'Introduction',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/intro/README.md',
+            '/intro/benefit.md',
             '/intro/contact-us.md',
           ]
         }
@@ -70,7 +69,18 @@ export default defineUserConfig({
           ]
         }
       ],
+      '/manual/': [
+        {
+          text: 'Guild system manual',
+          collapsable: false,
+          children: [
+            '/manual/README.md',
+            '/manual/guild-window.md',
+          ]
+        }
+      ],
     },
-    lastUpdated: true
+    lastUpdated: true,
+    contributors: false
   }),
 })
