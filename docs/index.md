@@ -3,7 +3,7 @@ home: true
 heroImage: /original_logo.png
 tagline: '#초식☘️ #매너😊 #거점❌'
 actions:
-  - text: Contact Us
+  - text: 가입 문의
     link: /intro/contact-us.md
     type: primary
   - text: Discord
