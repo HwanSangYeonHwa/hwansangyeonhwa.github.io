@@ -6,20 +6,20 @@ import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
   markdown: {
-    lineNumbers: false
+    lineNumbers: false,
   },
   lang: 'ko-KR',
   title: '환상연화',
   description: description,
   head: [
-    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}],
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}],
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png"}],
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png" }],
     ['meta', { name: 'theme-color', content: '#D1B2FF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
-  plugins:[
+  plugins: [
     googleAnalyticsPlugin({
       id: 'G-SG25RN9QVP',
     }),
@@ -37,7 +37,14 @@ export default defineUserConfig({
         link: '/intro/'
         //children: ['/intro/README.md', '/intro/contact-us.md']
       },
-
+      {
+        text: 'System',
+        link: '/system/'
+      },
+      {
+        text: 'Guide',
+        link: '/guide/'
+      },
       {
         text: 'Discord',
         link: 'https://discord.gg/uZ6VsfKqxG'
@@ -59,7 +66,27 @@ export default defineUserConfig({
           ]
         }
       ],
-
+      '/system/': [
+        {
+          text: 'Guild System Manual',
+          collapsable: true,
+          children: [
+            '/system/README.md',
+            '/system/guild-window.md',
+            '/system/guild-member-list.md',
+          ]
+        }
+      ],
+      '/guide/': [
+        {
+          text: 'Guide',
+          collapsable: true,
+          children: [
+            '/guide/README.md',
+            '/guide/guild-boss-raid.md',
+          ]
+        }
+      ],
     },
     lastUpdated: true,
     contributors: false

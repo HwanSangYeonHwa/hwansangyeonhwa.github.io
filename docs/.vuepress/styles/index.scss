@@ -16,3 +16,9 @@ img + em {
   display: block;
   text-align: center;
 }
+
+img:not(.logo) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
