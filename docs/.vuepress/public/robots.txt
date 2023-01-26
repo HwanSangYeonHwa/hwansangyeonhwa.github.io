@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /HSYH_Web/
+
+Sitemap: https://hwansangyeonhwa.github.io/sitemap.xml
