@@ -74,6 +74,8 @@ export default defineUserConfig({
             '/system/README.md',
             '/system/guild-window.md',
             '/system/guild-member-list.md',
+            '/system/guild-quest.md',
+            '/system/guild-boss-raid.md'
           ]
         }
       ],
@@ -88,7 +90,7 @@ export default defineUserConfig({
         }
       ],
     },
-    lastUpdated: true,
+    lastUpdated: false,
     contributors: false
   }),
 })
