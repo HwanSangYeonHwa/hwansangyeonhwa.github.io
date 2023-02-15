@@ -1,8 +1,12 @@
 const { description } = require('../../package')
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { getDirname, path } from '@vuepress/utils'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
+
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   markdown: {
@@ -20,6 +24,9 @@ export default defineUserConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
   plugins: [
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
     googleAnalyticsPlugin({
       id: 'G-SG25RN9QVP',
     }),
@@ -38,12 +45,12 @@ export default defineUserConfig({
         //children: ['/intro/README.md', '/intro/contact-us.md']
       },
       {
-        text: 'System',
-        link: '/system/'
-      },
-      {
         text: 'Guide',
         link: '/guide/'
+      },
+      {
+        text: 'Visitor',
+        link: '/visitor/'
       },
       {
         text: 'Discord',
@@ -66,29 +73,30 @@ export default defineUserConfig({
           ]
         }
       ],
-      '/system/': [
-        {
-          text: 'Guild System Manual',
-          collapsable: true,
-          children: [
-            '/system/README.md',
-            '/system/guild-window.md',
-            '/system/guild-member-list.md',
-            '/system/guild-quest.md',
-            '/system/guild-boss-raid.md'
-          ]
-        }
-      ],
       '/guide/': [
         {
-          text: 'Guide',
+          text: 'Guild System Guide',
           collapsable: true,
           children: [
             '/guide/README.md',
-            '/guide/guild-boss-raid.md',
+            '/guide/guild-window.md',
+            '/guide/guild-member-list.md',
+            '/guide/guild-quest.md',
+            '/guide/guild-boss-raid.md'
           ]
         }
       ],
+    },
+    enhance({ router }){
+      router.afterEach((to) => {
+        console.log('after navigation')
+        if (typeof window !== 'undefined' && window.DISQUS) {
+          setTimeout(() => {
+            console.log('DISQUS is exists and try to load!')
+            window.DISQUS.reset({ reload: true })
+          }, 0)
+        }
+      })
     },
     lastUpdated: false,
     contributors: false
