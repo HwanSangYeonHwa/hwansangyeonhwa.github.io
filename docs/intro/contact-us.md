@@ -21,7 +21,7 @@ tags: ["Join", "Discord", "상담"]
 ## 디스코드 <Badge type="tip" text="추천" vertical="middle"/>
  - 햄뮤#9143
  - [https://discord.gg/uZ6VsfKqxG](https://discord.gg/uZ6VsfKqxG)
-
+ 
 ::: tip 참고
 환상연화 디스코드 서버는 처음 입장 시 기본 채널만 보이게 되어있으며, 채널의 이전 채팅 내용은 보이지 않습니다.<br/>
 길드 가입 후 권한을 부여받아야 다른 채널을 사용할 수 있습니다. 
