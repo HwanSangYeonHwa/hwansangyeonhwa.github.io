@@ -11,10 +11,6 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://hwansangyeonhwa.github.io/system/</loc>
-        <priority>0.10</priority>
-    </url>
-    <url>
         <loc>https://hwansangyeonhwa.github.io/guide/</loc>
         <priority>0.10</priority>
     </url>
