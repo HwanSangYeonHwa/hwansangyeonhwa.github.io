@@ -32,11 +32,11 @@ jobs:
       - name: install dependency
         run: yarn install
       - name: install google analytics plugin
-        run: npm i -D @vuepress/plugin-google-analytics@next
+        run: npm i -D @vuepress/plugin-google-analytics@2.0.0-beta.60
       - name: install local search plugin
-        run: npm i -D @vuepress/plugin-search@next
+        run: npm i -D @vuepress/plugin-search@2.0.0-beta.60
       - name: install register components plugin
-        run: npm i -D @vuepress/plugin-register-components@next
+        run: npm i -D @vuepress/plugin-register-components@2.0.0-beta.60
       - name: build
         run: yarn build
       - name: upload artifact
