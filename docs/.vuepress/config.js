@@ -58,7 +58,7 @@ export default defineUserConfig({
       },
       {
         text: 'Karanda',
-        link: 'https://hwansangyeonhwa.github.io/Karanda'
+        link: 'https://www.karanda.kr'
       }
     ],
     sidebar: {
