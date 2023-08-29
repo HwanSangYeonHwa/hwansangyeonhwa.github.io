@@ -13,4 +13,5 @@ tags: ["system", "manual", "guide"]
 [1. 길드 화면](./guild-window.md)\
 [2. 길드원 현황](./guild-member-list.md)\
 [3. 길드 임무](./guild-quest.md)\
-[4. 길드 우두머리 토벌](./guild-boss-raid.md)
+[4. 길드 우두머리 토벌](./guild-boss-raid.md)\
+[5. 채팅창 분리 및 설정](./guild-chat.md)

@@ -82,7 +82,8 @@ export default defineUserConfig({
             '/guide/guild-window.md',
             '/guide/guild-member-list.md',
             '/guide/guild-quest.md',
-            '/guide/guild-boss-raid.md'
+            '/guide/guild-boss-raid.md',
+            '/guide/guild-chat.md'
           ]
         }
       ],
