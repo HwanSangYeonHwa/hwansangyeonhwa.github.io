@@ -49,9 +49,15 @@ export default defineUserConfig({
         link: '/guide/'
       },
       {
+        text: 'Event',
+        link: '/event/'
+      },
+      /*
+      {
         text: 'Visitor',
         link: '/visitor/'
       },
+      */
       {
         text: 'Discord',
         link: 'https://discord.gg/uZ6VsfKqxG'
@@ -87,6 +93,16 @@ export default defineUserConfig({
           ]
         }
       ],
+      '/event/': [
+        {
+          text: 'Guild events',
+          collapsable: true,
+          children: [
+            '/event/README.md',
+            '/event/20231118/README.md'
+          ]
+        }
+      ]
     },
     enhance({ router }){
       router.afterEach((to) => {
